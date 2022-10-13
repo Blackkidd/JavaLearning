@@ -33,10 +33,10 @@ public class Car {
         return carId + " " + carName + " " + carType + " " + carPrice;
     }
 
-    public void displayCar() {
-        System.out.println("ID = " + this.carId);
-        System.out.println("NAME = " + this.carName);
-        System.out.println("TYPE = " + this.carType);
-        System.out.println("PRICE = " + this.carPrice);
-    }
+    // public void displayCar() {
+    // System.out.println("ID = " + this.carId);
+    // System.out.println("NAME = " + this.carName);
+    // System.out.println("TYPE = " + this.carType);
+    // System.out.println("PRICE = " + this.carPrice);
+    // }
 }

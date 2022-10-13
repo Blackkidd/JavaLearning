@@ -24,6 +24,7 @@ public class main {
         String employeeName = "";
         boolean dataFound;
 
+        // []carList
         List<Car> carList = new ArrayList<Car>();
 
         Scanner scanKeyboard = new Scanner(System.in);
@@ -35,6 +36,12 @@ public class main {
 
         // menu select
         do {
+            // ListInterator > cursors
+            ListIterator<Car> clist = carList.listIterator();
+            // Iterator > loop in List<Car>
+            Iterator<Car> carIterator = carList.iterator();
+
+            System.out.println("--------------------");
             System.out.println("USERNAME : " + employeeName);
             menu();
             checkOptions = scanKeyboard.nextInt();
@@ -45,7 +52,7 @@ public class main {
                     break;
                 // Insert
                 case 1:
-                    System.out.println("---INSERT---");
+                    System.out.println("--------Insert--------");
                     System.out.print("Enter Car ID: ");
                     int newCarId = scanKeyboard.nextInt();
 
@@ -60,15 +67,17 @@ public class main {
 
                     // create new
                     carList.add(new Car(newCarId, newCarName, newCarType, newCarPrice));
-                    System.out.println("---INSERT SUCCESS---");
+                    System.out.println("insert success.");
 
                     break;
                 // Update
                 case 2:
                     System.out.println("---UPDATE---");
-                    ListIterator<Car> clist = carList.listIterator();
-                    // hasnext return boolean type
-                    Iterator<Car> carIterator = carList.iterator();
+                    // ListInterator > cursors
+                    // ListIterator<Car> clist = carList.listIterator();
+                    // Iterator > loop in List<Car>
+                    // Iterator<Car> carIterator = carList.iterator();
+
                     dataFound = false;
                     System.out.print("Enter ID : ");
                     newCarId = scanKeyboard.nextInt();
